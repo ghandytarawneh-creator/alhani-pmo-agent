@@ -30,8 +30,10 @@ def _load_dotenv() -> None:
 
 _load_dotenv()
 
+MODEL = os.getenv("ALHANI_MODEL", "mistral-large-4")
+
 agent = agents.Agent(
-    model="mistral-large-4",
+    model=MODEL,
     name="alhani-pmo-agent",
     instructions=SYSTEM_INSTRUCTIONS,
     tools=[score_risk, days_until],
