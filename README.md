@@ -38,8 +38,11 @@ project documents from shared links.
 ```bash
 uv sync
 cp .env.example .env   # then paste your Mistral API key into .env
-uv run agents chat
+uv run --env-file .env agents chat
 ```
+
+Alternatively, export the key in your shell and run `uv run agents chat` directly —
+the `agents` CLI does not read `.env` by itself.
 
 Offline check (no API key needed, scripted model, real tool execution):
 
