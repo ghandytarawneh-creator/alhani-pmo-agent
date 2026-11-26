@@ -30,7 +30,7 @@ def _load_dotenv() -> None:
 
 _load_dotenv()
 
-MODEL = os.getenv("ALHANI_MODEL", "mistral-large-4")
+MODEL = os.getenv("ALHANI_MODEL", "mistral-medium-latest")
 
 agent = agents.Agent(
     model=MODEL,
