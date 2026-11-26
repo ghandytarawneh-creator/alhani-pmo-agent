@@ -37,8 +37,14 @@ project documents from shared links.
 
 ```bash
 uv sync
-export MISTRAL_API_KEY=<key with Workflows access>
+cp .env.example .env   # then paste your Mistral API key into .env
 uv run agents chat
+```
+
+Offline check (no API key needed, scripted model, real tool execution):
+
+```bash
+uv run pytest tests/
 ```
 
 ## Deploy (Mistral-managed)
